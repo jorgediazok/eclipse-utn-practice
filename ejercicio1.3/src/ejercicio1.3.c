@@ -15,40 +15,40 @@ int main(void) {
 
 	setbuf(stdout, NULL);
 
-	int i;
-	int numeroIngresado;
-	int numeroMayor;
-	int numeroMenor;
+	int numero1;
+	int numero2;
+	int numero3;
 	int numeroMedio;
-	int flagMayor = 0;
-	int flagMenor = 0;
-	int flagMedio = 0;
+
+    printf("Ingrese un número \n");
+	scanf("%d",&numero1);
+
+	printf("Ingrese un segundo número \n");
+	scanf("%d",&numero2);
+
+	printf("Ingrese un tercer número \n");
+	scanf("%d",&numero3);
+
+	     if(numero1 == numero2 || numero1 == numero3 || numero2 == numero3){
+	         	 printf("no existe numero del medio \n");
+	          } else{
+
+	              if((numero1>numero2 && numero1<numero3) || (numero1<numero2 && numero1>numero3)){
+	         		 numeroMedio=numero1;
+	         	 }
+
+	         	 if((numero2<numero1 && numero2>numero3) || (numero2>numero1 && numero2<numero3)){
+	         	     numeroMedio=numero2;
+	         	 }
+
+	         	 if((numero3<numero1 && numero3>numero2) || (numero3>numero1 && numero3<numero2)){
+	         	     numeroMedio=numero3;
+	         	 }
+
+	          }
 
 
-	for(i=0; i < 3; i++){
-
-	printf("Ingrese un número:\n");
-	scanf("%d", &numeroIngresado);
-
-	if(flagMayor == 0 || numeroIngresado > numeroMayor){
-		numeroMayor = numeroIngresado;
-		flagMayor = 1;
-   }
-
-
-	if(flagMenor == 0 || numeroIngresado < numeroMenor){
-	 numeroMenor = numeroIngresado;
-		flagMenor = 1;
-	}
-
-   }
-
-	numeroMedio = numeroIngresado;
-
-
-	printf("El número mayor es %d\n", numeroMayor);
-	printf("El númerno menor es %d\n", numeroMenor);
-	printf("El número del medio es %d\n", numeroMedio);
+	     printf("El número del medio es %d\n", numeroMedio);
 
 
 	return EXIT_SUCCESS;
