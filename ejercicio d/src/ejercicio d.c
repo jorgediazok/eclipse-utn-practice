@@ -17,6 +17,22 @@
 #include <stdlib.h>
 
 int main(void) {
-	puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
+	setbuf(stdout, NULL);
+
+	int numero;
+	int a;
+	int b;
+	a = 1;
+	b = 0;
+
+	printf("Ingrese un número:\n");
+	scanf("%d", &numero);
+
+	if(numero % 2 == 0){
+	    printf("%d", a);
+	}else{
+		printf("%d", b);
+	}
+
 	return EXIT_SUCCESS;
 }
