@@ -17,5 +17,24 @@
 #include <stdlib.h>
 
 int main(void) {
+
+	setbuf(stdout, NULL);
+
+	int edad;
+	char estadoCivil;
+
+	printf("Ingrese su edad:\n ");
+	scanf("%d", &edad);
+	printf("Ingrese su estado civil: 'c'-casado, 's'-soltero, 'v'-viudo, 'd'-divorciado\n");
+	fflush(stdin);
+	scanf("%c", &estadoCivil);
+
+	if(edad < 18 && estadoCivil != 's'){
+		printf("Es muy pequeño para NO ser soltero");
+	}else{
+		printf("\n Su edad es: %d", edad);
+	    printf("\n Su estado civil es: %c", estadoCivil);
+	}
+
 	return EXIT_SUCCESS;
 }
