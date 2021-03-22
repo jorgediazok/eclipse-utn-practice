@@ -57,7 +57,7 @@ int main(void) {
 
 //3 creando estructuras
 
-struct perro{
+/*struct perro{
 		char nombre[30];
 		int edad;
 		float peso;
@@ -71,4 +71,37 @@ int main() {
 	printf("El peso de: %s es %.2f Kg y tiene %i años\n", perro2.nombre, perro2.peso, perro2.edad);
 
 	return EXIT_SUCCESS;
+}*/
+
+// 4 creando estructuras con arreglos
+
+struct perro{
+		char nombre[30];
+		int edad;
+		float peso;
+	}perros[3];
+
+
+int main() {
+	setbuf(stdout, NULL);
+
+	for(int i = 0; i<3; i++){
+		printf("%i Ingrese el nombre del perro\n",i+1);
+		scanf("%s",perros[i].nombre);
+
+		printf("%i Ingrese la edad del perro\n", i+1);
+		scanf("%d", &perros[i].edad);
+
+		printf("%i Ingrese el peso del perro\n", i+1);
+		scanf("%f", &perros[i].peso);
+	}
+
+	for(int i=0; i<3; i++){
+		printf("%i El nombre del perro es %s\n", i+1, perros[i].nombre);
+		printf("%i La edad del perro es %i\n", i+1, perros[i].edad);
+		printf("%i El peso del perro es %.2f\n", i+1, perros[i].peso);
+	}
+
+	return EXIT_SUCCESS;
 }
+
