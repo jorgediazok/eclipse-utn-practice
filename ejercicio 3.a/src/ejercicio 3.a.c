@@ -5,6 +5,14 @@
  Version     :
  Copyright   : Your copyright notice
  Description : Hello World in C, Ansi-style
+
+- Limpie la pantalla
+- Asigne a las variables numero1 y numero2 los valores solicitados al usuario
+- Valide los mismos entre 10 y 100
+- Asigne a la variable operacion el valor solicitado al usuario
+- Valide el mismo 's'-sumar, 'r'-restar
+- Realice la operación de dichos valores a través de una función
+- Muestre el resultado por pantalla
  ============================================================================
  */
 
