@@ -11,7 +11,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int operacion(int numeroIngresado1, int numeroIngresado2);
+int sumarDosNumeros(int numero1, int numero2);
+int restarDosNumeros(int numero1, int numero2);
 
 int main(void) {
 
@@ -19,7 +20,8 @@ int main(void) {
 
 	int numeroIngresado1;
 	int numeroIngresado2;
-	int resultadoSuma;
+	int suma;
+	int resta;
 
 	printf("Ingrese un número: \n");
 	scanf("%d", &numeroIngresado1);
@@ -28,32 +30,37 @@ int main(void) {
 	scanf("%d", &numeroIngresado2);
 
 	while((numeroIngresado1 < 10 || numeroIngresado2 <10)   || (numeroIngresado1 > 100 || numeroIngresado2 > 100)){
-		printf("Ambos números deben ser mayores a 10 y menores a 100");
-		scanf("%d", &numeroIngresado1);
-		scanf("%d", &numeroIngresado2);
-	}
-
-	resultadoSuma = numeroIngresado1 + numeroIngresado2;
-
-	printf("La suma de los números es %d", resultadoSuma);
+				printf("Ambos números deben ser mayores a 10 y menores a 100. Pruebe de nuevo. \n");
+				scanf("%d", &numeroIngresado1);
+				scanf("%d", &numeroIngresado2);
+			}
 
 
-	//valorConDescuento = numeroIngresado - realizarDescuento(numeroIngresado, DESCUENTO);
+	suma = sumarDosNumeros(numeroIngresado1, numeroIngresado2);
+	printf("La suma de los números es %d\n" , suma);
 
-	//	printf("Sus numeros ingresados son %d y %d", numeroIngresado1, numeroIngresado2);
+	resta = restarDosNumeros(numeroIngresado1, numeroIngresado2);
+	printf("La resta de los números es %d\n", resta);
 
 
 	return EXIT_SUCCESS;
 }
 
 
-int operacion(int numero1, int numero2){
-	int suma;
-	int resta;
+int sumarDosNumeros(int numero1, int numero2){
+		int s;
 
-	suma = numero1 + numero2;
-	resta = numero1 - numero2;
+		s = numero1 + numero2;
 
-	return suma && resta;
+		return s;
 }
+
+int restarDosNumeros(int numero1, int numero2){
+		int r;
+
+		r = numero1 - numero2;
+
+		return r;
+}
+
 
